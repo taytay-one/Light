@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f4f5f7"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/llTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_dark"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp" 
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:onClick="back"
+            android:padding="5dp"
+            android:src="@mipmap/back" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/cardBg1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/card_heigh"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/round_bg"
+        app:layout_constraintTop_toBottomOf="@+id/llTitle"></View>
+
+    <TextView
+        android:id="@+id/tvClass1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="点灯大师进阶版"
+        android:textColor="#050505"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="@+id/cardBg1"
+        app:layout_constraintTop_toTopOf="@+id/cardBg1"></TextView>
+
+    <TextView
+        android:id="@+id/tvSizeStatus1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="赵同学VIP专属版本"
+        android:textColor="#888888"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="@+id/tvClass1"
+        app:layout_constraintTop_toBottomOf="@+id/tvClass1"></TextView>
+
+    <Switch
+        android:id="@+id/sw1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cardBg1"
+        app:layout_constraintRight_toRightOf="@+id/cardBg1"
+        app:layout_constraintTop_toTopOf="@+id/cardBg1"></Switch>
+
+    <Button
+        android:id="@+id/toBT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="75dp"
+        android:text="连接蓝牙"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"></Button>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
